@@ -1,0 +1,130 @@
+/* Contenedor principal del chat */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+  height: 90vh;
+}
+
+/* Área de los mensajes */
+.chat-box {
+  width: 100%;
+  height: 60%;
+  overflow-y: scroll;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Estilo de los mensajes */
+.message {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+/* Estilo para los mensajes del usuario */
+.user-message {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Estilo para los mensajes del bot */
+.bot-message {
+  background-color: #f8d7da;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Contenedor del campo de entrada */
+.input-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Estilo del input */
+.input-container input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Estilo del botón */
+.input-container button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón */
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor de videos */
+.videos {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Estilo de los videos */
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-item {
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.video-item video {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Estilo para el botón de cerrar sesión */
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,36 @@
+<div class="chat-container">
+  <!-- Área de mensajes -->
+  <div class="chat-box">
+    <div *ngFor="let message of messages" class="message" [ngClass]="{ 'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot' }">
+      <p>{{ message.text }}</p>
+    </div>
+  </div>
+
+  <!-- Campo de entrada de mensaje -->
+  <div class="input-container">
+    <input 
+      [(ngModel)]="messageInput" 
+      type="text" 
+      placeholder="Escribe un mensaje..." 
+      (keydown.enter)="sendMessage()">
+    <button (click)="sendMessage()">Enviar</button>
+    <button (click)="startVoiceRecognition()">Hablar</button>
+  </div>
+
+  <!-- Videos obtenidos del backend -->
+  <div class="videos">
+    <h3>Videos</h3>
+    <div class="video-list">
+      <div *ngFor="let video of videos" class="video-item">
+        <p>{{ video.titulo }}</p>
+        <video *ngIf="video.link" controls>
+          <source [src]="video.link" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón para cerrar sesión -->
+  <button class="logout-button" (click)="logout()">Cerrar sesión</button>
+</div>
